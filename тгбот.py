@@ -5,8 +5,12 @@ from aiogram.types import LabeledPrice, PreCheckoutQuery, Message, CallbackQuery
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 # --- НАСТРОЙКИ ---
-BOT_TOKEN = "8963103233:AAEksqp3H9KYbN3FM-b7V0Fkhnyem1TFtg0" \
-    ""  # <-- Вставь токен бота
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")\
+
 STARS_PRICE = 20  # Цена в звездах
 # -----------------
 
